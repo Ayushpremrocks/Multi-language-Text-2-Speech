@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-language Text to Speech</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Multilingual Text-to-Speech Converter</h1>
+
+        <form method="POST" action="/">
+            <textarea name="text" placeholder="Enter your text here" required></textarea>
+            <select name="lang" required>
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+            </select>
+            <button type="submit">Convert to speech</button>
+        </form>
+
+        {% if audio_url %}
+        <audio controls autoplay>
+            <source src="{{ audio_url }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        {% endif %}
+
+    </div>
+</body>
+
+</html>

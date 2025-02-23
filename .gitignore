@@ -1,0 +1,17 @@
+# Ignore Vercel, VS Code, and virtual environment
+.vercel/
+.vscode/
+venv/
+
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment and system files
+.env
+.DS_Store
+
+# Ignore audio/media files if not needed
+*.mp3
